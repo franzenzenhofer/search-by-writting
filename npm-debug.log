@@ -1,0 +1,54 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'https://github.com/Leimi/drawingboard.js' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'https://github.com/Leimi/drawingboard.js', null ]
+5 verbose cache add name=undefined spec="https://github.com/Leimi/drawingboard.js" args=["https://github.com/Leimi/drawingboard.js",null]
+6 verbose parsed url { protocol: 'https:',
+6 verbose parsed url   slashes: true,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: 'github.com',
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: 'github.com',
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: '/Leimi/drawingboard.js',
+6 verbose parsed url   path: '/Leimi/drawingboard.js',
+6 verbose parsed url   href: 'https://github.com/Leimi/drawingboard.js' }
+7 silly lockFile 53d30d98-github-com-Leimi-drawingboard-js https://github.com/Leimi/drawingboard.js
+8 verbose lock https://github.com/Leimi/drawingboard.js /Users/franzseo/.npm/53d30d98-github-com-Leimi-drawingboard-js.lock
+9 verbose addRemoteTarball [ 'https://github.com/Leimi/drawingboard.js', null ]
+10 info retry fetch attempt 1 at 21:39:39
+11 verbose fetch to= /var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js
+12 http GET https://github.com/Leimi/drawingboard.js
+13 http 200 https://github.com/Leimi/drawingboard.js
+14 verbose tar unpack /var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js
+15 silly lockFile 653abb03-com-Leimi-drawingboard-js-unpack tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js-unpack
+16 verbose lock tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js-unpack /Users/franzseo/.npm/653abb03-com-Leimi-drawingboard-js-unpack.lock
+17 silly lockFile 82dcb1a8-github-com-Leimi-drawingboard-js tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js
+18 verbose lock tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js /Users/franzseo/.npm/82dcb1a8-github-com-Leimi-drawingboard-js.lock
+19 silly gunzTarPerm modes [ '755', '644' ]
+20 error not a package /var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js
+21 silly lockFile 653abb03-com-Leimi-drawingboard-js-unpack tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js-unpack
+22 silly lockFile 653abb03-com-Leimi-drawingboard-js-unpack tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js-unpack
+23 silly lockFile 82dcb1a8-github-com-Leimi-drawingboard-js tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js
+24 silly lockFile 82dcb1a8-github-com-Leimi-drawingboard-js tar:///var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js
+25 silly lockFile 53d30d98-github-com-Leimi-drawingboard-js https://github.com/Leimi/drawingboard.js
+26 silly lockFile 53d30d98-github-com-Leimi-drawingboard-js https://github.com/Leimi/drawingboard.js
+27 error Error: ENOENT, open '/var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js-unpack/package.json'
+28 error If you need help, you may report this *entire* log,
+28 error including the npm and node versions, at:
+28 error     <http://github.com/npm/npm/issues>
+29 error System Darwin 13.4.0
+30 error command "node" "/usr/local/bin/npm" "install" "https://github.com/Leimi/drawingboard.js"
+31 error cwd /Users/franzseo/dev/search-by-writting
+32 error node -v v0.10.32
+33 error npm -v 1.4.28
+34 error path /var/folders/dr/lb5fyk0n2xsctsrybxwm_c0h0000gn/T/npm-1029-n7kpOvwc/github.com/Leimi/drawingboard.js-unpack/package.json
+35 error code ENOENT
+36 error errno 34
+37 verbose exit [ 34, true ]
