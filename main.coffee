@@ -49,8 +49,8 @@ canvas2Drawingboard = (c) ->
       ctx.fillStyle = "black"
 
     rect = c.getBoundingClientRect()
-    x = e.clientX - rect.left - r/2
-    y = e.clientY - rect.top - r/2
+    x = e.pageX - rect.left - r/2
+    y = e.pageY - rect.top - r/2
     #ctx.fillRect(x, y, r, r) if draw
     drawCircle(ctx,x,y,r) if draw
 

@@ -71,8 +71,8 @@
         ctx.fillStyle = "black";
       }
       rect = c.getBoundingClientRect();
-      x = e.clientX - rect.left - r / 2;
-      y = e.clientY - rect.top - r / 2;
+      x = e.pageX - rect.left - r / 2;
+      y = e.pageY - rect.top - r / 2;
       if (draw) {
         return drawCircle(ctx, x, y, r);
       }
