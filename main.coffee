@@ -54,13 +54,13 @@ canvas2Drawingboard = (c) ->
     #ctx.fillRect(x, y, r, r) if draw
     drawCircle(ctx,x,y,r) if draw
 
-  c.addEventListener('mousedown', (e) ->
-    draw = true
-    move(e)
-  )
+  c.addEventListener('mousedown', (e) -> draw = true; move(e))
+  c.addEventListener('touchstart', (e) -> draw = true; move(e))
   #window.document.addEventListener('mouseup', (e) -> draw = false)
   c.addEventListener('mouseup', (e) -> draw = false)
+  c.addEventListener('touchend', (e) -> draw = false)
   c.addEventListener('mousemove', move)
+  c.addEventListener('touchmove', move)
 
 canvas2Drawingboard(window.document.getElementById('board'))
 

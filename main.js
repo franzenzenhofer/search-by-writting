@@ -81,10 +81,18 @@
       draw = true;
       return move(e);
     });
+    c.addEventListener('touchstart', function(e) {
+      draw = true;
+      return move(e);
+    });
     c.addEventListener('mouseup', function(e) {
       return draw = false;
     });
-    return c.addEventListener('mousemove', move);
+    c.addEventListener('touchend', function(e) {
+      return draw = false;
+    });
+    c.addEventListener('mousemove', move);
+    return c.addEventListener('touchmove', move);
   };
 
   canvas2Drawingboard(window.document.getElementById('board'));
