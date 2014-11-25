@@ -24,7 +24,7 @@ speak = (text, opt) ->
 speak('Welcome to Search by writing', opt = 
     rate: 1.2
     pitch: 1.1
-    voice: 3
+    voice: 2
   )
 
 resetCanvas = (c) ->
