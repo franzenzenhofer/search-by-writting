@@ -15,24 +15,29 @@
   _eraser_ = false;
 
   speak = function(text, opt) {
-    var k, out_loud, v, voices;
-    text = text.trim();
-    out_loud = new SpeechSynthesisUtterance();
-    out_loud.onerror = function(e) {
-      return d(e);
-    };
-    for (k in opt) {
-      v = opt[k];
-      if (k === 'voice') {
-        voices = window.speechSynthesis.getVoices();
-        out_loud.voice = voices[v];
-      } else {
-        out_loud[k] = v;
+    var error, k, out_loud, v, voices;
+    try {
+      text = text.trim();
+      out_loud = new SpeechSynthesisUtterance();
+      out_loud.onerror = function(e) {
+        return d(e);
+      };
+      for (k in opt) {
+        v = opt[k];
+        if (k === 'voice') {
+          voices = window.speechSynthesis.getVoices();
+          out_loud.voice = voices[v];
+        } else {
+          out_loud[k] = v;
+        }
       }
-    }
-    out_loud.text = text;
-    if (window.speechSynthesis.speaking === false) {
-      return window.speechSynthesis.speak(out_loud);
+      out_loud.text = text;
+      if (window.speechSynthesis.speaking === false) {
+        return window.speechSynthesis.speak(out_loud);
+      }
+    } catch (_error) {
+      error = _error;
+      return d(error);
     }
   };
 

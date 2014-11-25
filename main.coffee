@@ -5,18 +5,21 @@ _last_word_ = ''
 _eraser_ = false
 
 speak = (text, opt) ->
-  text = text.trim()
-  out_loud = new SpeechSynthesisUtterance()
-  out_loud.onerror = (e) -> d(e)
-  for k, v of opt
-    if k is 'voice'
-      voices = window.speechSynthesis.getVoices()
-      out_loud.voice = voices[v]
-    else
-      out_loud[k]=v
-  out_loud.text = text
-  if window.speechSynthesis.speaking is false
-    window.speechSynthesis.speak(out_loud)
+  try
+    text = text.trim()
+    out_loud = new SpeechSynthesisUtterance()
+    out_loud.onerror = (e) -> d(e)
+    for k, v of opt
+      if k is 'voice'
+        voices = window.speechSynthesis.getVoices()
+        out_loud.voice = voices[v]
+      else
+        out_loud[k]=v
+    out_loud.text = text
+    if window.speechSynthesis.speaking is false
+      window.speechSynthesis.speak(out_loud)
+  catch error
+    d(error)
 
 speak('Welcome to Search by writing', opt = 
     rate: 1.2
