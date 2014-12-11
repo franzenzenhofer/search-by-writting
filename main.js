@@ -26,6 +26,7 @@
         v = opt[k];
         if (k === 'voice') {
           voices = window.speechSynthesis.getVoices();
+          d(voices);
           out_loud.voice = voices[v];
         } else {
           out_loud[k] = v;
@@ -44,7 +45,7 @@
   speak('Welcome to Search by writing', opt = {
     rate: 1.2,
     pitch: 1.1,
-    voice: 2
+    voice: 7
   });
 
   resetCanvas = function(c) {

@@ -12,6 +12,7 @@ speak = (text, opt) ->
     for k, v of opt
       if k is 'voice'
         voices = window.speechSynthesis.getVoices()
+        d(voices)
         out_loud.voice = voices[v]
       else
         out_loud[k]=v
@@ -24,7 +25,7 @@ speak = (text, opt) ->
 speak('Welcome to Search by writing', opt = 
     rate: 1.2
     pitch: 1.1
-    voice: 2
+    voice: 7
   )
 
 resetCanvas = (c) ->
@@ -77,7 +78,8 @@ window.document.getElementById('board').addEventListener('mouseup', (e) ->
 
 window.document.getElementById('reset').addEventListener('click', (() -> resetCanvas(window.document.getElementById('board'))))
 
-window.document.getElementById('google').addEventListener('click', (() -> window.document.location = "https://www.google.com/search?q="+encodeURIComponent(_last_word_)+"&pws=0&hl=en"))
+window.document.getElementById('google').addEventListener('click', (() -> 
+  window.document.location = "https://www.google.com/search?q="+encodeURIComponent(_last_word_)+"&pws=0&hl=en"))
 
 window.document.getElementById('eraser').addEventListener('click', (
   () ->
